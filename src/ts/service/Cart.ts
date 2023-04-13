@@ -12,18 +12,14 @@ export default class Cart {
     }    
 
     priceWithoutDiscount(): number {
-        return this._items.reduce((acc, item) => acc + item.price, 0);
+        return this._items.reduce((acc: number, item: Buyable) => acc + item.price, 0);
     }
 
     discountPrice(discount: number): number {
-        return (this.priceWithoutDiscount() - discount);
+        return this.priceWithoutDiscount() - discount;
     }
     
     removeObject(id: number): void {
-        const idOfCart = this._items.findIndex(item => item.id === id);
-
-        if (idOfCart !== -1) {
-            this._items.splice(idOfCart, 1)
-        }
+        this._items = this._items.filter((item: Buyable) => item.id !== id);
     }
 }
