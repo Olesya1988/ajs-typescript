@@ -1,0 +1,58 @@
+{
+  "name": "ajs-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production",
+    "watch": "tsc -w",
+    "lint": "eslint .",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "doc": "jsdoc -c jsdoc.conf.json",
+    "preshow:coverage": "npm run coverage",
+    "show:coverage": "live-server coverage/lcov-report",
+    "preshow:doc": "npm run doc",
+    "show:doc": "live-server doc",
+    "preshow:dist": "npm run build",
+    "show:dist": "live-server dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olesya1988/ajs-typescript.git"
+  },
+  "author": "Olesya Vetoshkina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Olesya1988/ajs-typescript/issues"
+  },
+  "homepage": "https://github.com/Olesya1988/ajs-typescript#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@types/jest": "^29.5.0",
+    "babel-jest": "^29.5.0",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.38.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.5.0",
+    "jsdoc": "^4.0.2",
+    "live-server": "^1.2.2",
+    "mini-css-extract-plugin": "^2.7.5",
+    "ts-jest": "^29.1.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.78.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.2"
+  },
+  "dependencies": {
+    "core-js": "^3.30.0"
+  }
+}
